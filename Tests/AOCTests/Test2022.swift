@@ -2,7 +2,7 @@
 //  Test2022.swift
 //  AOCTests
 //
-//  Created by Dave DeLong on 10/12/22.
+//  Created by Dave DeLong on 12/16/22.
 //  Copyright © 2022 Dave DeLong. All rights reserved.
 //
 
@@ -15,112 +15,112 @@ class Test2022: XCTestCase {
         let d = Day1()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 70296)
-        XCTAssertEqual(p2, 205381)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay2() async throws {
         let d = Day2()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 13526)
-        XCTAssertEqual(p2, 14204)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay3() async throws {
         let d = Day3()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 7903)
-        XCTAssertEqual(p2, 2548)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay4() async throws {
         let d = Day4()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 536)
-        XCTAssertEqual(p2, 845)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay5() async throws {
         let d = Day5()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, "BZLVHBWQF")
-        XCTAssertEqual(p2, "TDGJQTZSL")
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay6() async throws {
         let d = Day6()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 1855)
-        XCTAssertEqual(p2, 3256)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay7() async throws {
         let d = Day7()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 1501149)
-        XCTAssertEqual(p2, 10096985)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay8() async throws {
         let d = Day8()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 1672)
-        XCTAssertEqual(p2, 327180)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay9() async throws {
         let d = Day9()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 6067)
-        XCTAssertEqual(p2, 2471)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay10() async throws {
         let d = Day10()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 14720)
-        XCTAssertEqual(p2, "FZBPBFZF")
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay11() async throws {
         let d = Day11()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 124608)
-        XCTAssertEqual(p2, 25590400731)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay12() async throws {
         let d = Day12()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 383)
-        XCTAssertEqual(p2, 377)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay13() async throws {
         let d = Day13()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 6272)
-        XCTAssertEqual(p2, 22288)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay14() async throws {
         let d = Day14()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, 873)
-        XCTAssertEqual(p2, 24813)
+        XCTAssertEqual(p1, "")
+        XCTAssertEqual(p2, "")
     }
 
     func testDay15() async throws {
