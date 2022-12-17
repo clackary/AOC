@@ -6,7 +6,7 @@ import Foundation
 
 let package = Package(
     name: "Advent of Code",
-    platforms: [.macOS(.v11)],
+    platforms: [.macOS(.v13)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .executable(name: "advent", targets: ["advent"]),
