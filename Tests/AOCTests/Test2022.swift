@@ -93,8 +93,34 @@ class Test2022: XCTestCase {
         let d = Day10()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, "")
-        XCTAssertEqual(p2, "")
+        var cpu: Day10.CPU = Day10.CPU()
+        XCTAssertEqual(cpu.x, 1)
+        XCTAssertEqual(cpu.cycleCount, 0)
+        cpu.resolveInstruction("noop")
+        XCTAssertEqual(cpu.cycleCount, 1)
+        XCTAssertEqual(cpu.x, 1)
+        cpu.resolveInstruction("addx 3")
+        XCTAssertEqual(cpu.cycleCount, 3)
+        XCTAssertEqual(cpu.x, 4)
+        XCTAssertEqual(cpu.signalStrength(afterCycle: 2), 2)
+        XCTAssertEqual(cpu.signalStrength(afterCycle: 3), 12)
+        cpu.resolveInstruction("addx -5")
+        XCTAssertEqual(cpu.cycleCount, 5)
+        XCTAssertEqual(cpu.x, -1)
+        XCTAssertEqual(cpu.signalStrength(afterCycle: 4), 16)
+        XCTAssertEqual(cpu.signalStrength(duringCycle: 5), 20)
+        XCTAssertEqual(cpu.signalStrength(afterCycle: 5), -5)
+
+        XCTAssertEqual(cpu.xValue(duringCycle: 1), 1)
+        XCTAssertEqual(cpu.xValue(duringCycle: 2), 1)
+        XCTAssertEqual(cpu.xValue(duringCycle: 3), 1)
+        XCTAssertEqual(cpu.xValue(duringCycle: 4), 4)
+        XCTAssertEqual(cpu.xValue(duringCycle: 5), 4)
+        XCTAssertEqual(cpu.xRange(duringCycle: 2), 0...2)
+        XCTAssertEqual(cpu.xRange(duringCycle: 4), 3...5)
+
+        XCTAssertEqual(p1, 13760)
+        XCTAssertEqual(p2, "RFKZCPEF")
     }
 
     func testDay11() async throws {
