@@ -7,23 +7,34 @@
 //
 
 class Day1: Day {
-    typealias Part1 = String
-    typealias Part2 = String
-    
-    static var rawInput: String? { nil }
+    typealias Part1 = Int
+    typealias Part2 = Int
+
+    var results: [Int] = []
 
     func run() async throws -> (Part1, Part2) {
+        var sum = 0
+
+        for line in input().lines.raw {
+            if line == "" {
+                results.append(sum)
+                sum = 0
+                continue
+            }
+            sum += Int(line)!
+        }
+
         let p1 = try await part1()
         let p2 = try await part2()
         return (p1, p2)
     }
 
     func part1() async throws -> Part1 {
-        return #function
+        return Int(results.max()!)
     }
 
     func part2() async throws -> Part2 {
-        return #function
+        let sorted = results.sorted(by: >)
+        return sorted[0] + sorted[1] + sorted[2]
     }
-
 }
