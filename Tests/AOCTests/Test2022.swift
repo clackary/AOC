@@ -79,8 +79,14 @@ class Test2022: XCTestCase {
         let d = Day9()
         let (p1, p2) = try await d.run()
 
-        XCTAssertEqual(p1, "")
-        XCTAssertEqual(p2, "")
+        var r = Day9.RopeSegment(0, 0)
+        r.step(toward: [.left, .up])
+        XCTAssertTrue(r.position.x == -1)
+        XCTAssertTrue(r.position.y == 1)
+        XCTAssertTrue(r.coordHistory.count == 2)
+
+        XCTAssertEqual(p1, 6464)
+        XCTAssertEqual(p2, 2604)
     }
 
     func testDay10() async throws {
