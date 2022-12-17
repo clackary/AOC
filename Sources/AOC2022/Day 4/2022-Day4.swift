@@ -7,8 +7,8 @@
 //
 
 class Day4: Day {
-    typealias Part1 = String
-    typealias Part2 = String
+    typealias Part1 = Int
+    typealias Part2 = Int
     
     static var rawInput: String? { nil }
 
@@ -19,11 +19,60 @@ class Day4: Day {
     }
 
     func part1() async throws -> Part1 {
-        return #function
+        var pairs: [Pair] = []
+        for str in input().lines.raw {
+            let places = str.components(separatedBy: CharacterSet(charactersIn: ",-")).map { Int($0)! }
+            guard places.count == 4 else {
+                fatalError()
+            }
+            pairs.append(Pair(firstAssignment: places[0]...places[1], secondAssignment: places[2]...places[3]))
+        }
+
+        var result = 0
+
+        for pair in pairs {
+            // Part one - does one fully contain the other
+            if pair.fullyContains() {
+                result += 1
+            }
+        }
+
+        return result
     }
 
     func part2() async throws -> Part2 {
-        return #function
-    }
+        var pairs: [Pair] = []
+        for str in input().lines.raw {
+            let places = str.components(separatedBy: CharacterSet(charactersIn: ",-")).map { Int($0)! }
+            guard places.count == 4 else {
+                fatalError()
+            }
+            pairs.append(Pair(firstAssignment: places[0]...places[1], secondAssignment: places[2]...places[3]))
+        }
 
+        var result = 0
+
+        for pair in pairs {
+            if pair.firstAssignment.overlaps(pair.secondAssignment) {
+                result += 1
+            }
+        }
+
+        return result
+    }
+    
+    struct Pair {
+        let firstAssignment: ClosedRange<Int>
+        let secondAssignment: ClosedRange<Int>
+
+        func fullyContains() -> Bool {
+            if firstAssignment.contains(secondAssignment) {
+                return true
+            }
+            if secondAssignment.contains(firstAssignment) {
+                return true
+            }
+            return false
+        }
+    }
 }
